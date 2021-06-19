@@ -12,5 +12,3 @@ if (!empty($nis)) {
     echo 0;
   }
 }
-
-header('location: index.php');
