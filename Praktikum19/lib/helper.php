@@ -2,7 +2,12 @@
     session_start();
 
     function base_url(){
-        return "http://localhost/pwpb-rifqi/Praktikum18/views/v_login.php";
+        return "http://localhost/pwpb-rifqi/Praktikum19/views/v_login.php";
+        
+    }
+
+    function base_img(){
+        return "http://localhost/pwpb-rifqi/Praktikum19/";
         
     }
 

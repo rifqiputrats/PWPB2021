@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Praktikum 18, Rifqi Putra T S XI RPL 2</title>
+    <title>Praktikum 19, Rifqi Putra T S XI RPL 2</title>
     <link rel="stylesheet" type="text/css" href="assets/akai.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
 </head>
@@ -27,23 +27,28 @@
         <thead>
            <tr>
                 <th scope="col">NO</th>
-                <th scope="col">NIS
+                <th scope="col">
+                NIS
                 <a href="index.php?sort=nis&order=asc">▲</a>
                 <a href="index.php?sort=nis&order=desc">▼</a>
                 </th>
-                <th scope="col">Nama Lengkap
+                <th scope="col">
+                Nama Lengkap
                 <a href="index.php?sort=nama_lengkap&order=asc">▲</a>
                 <a href="index.php?sort=nama_lengkap&order=desc">▼</a>
                 </th>
-                <th scope="col">Gender
+                <th scope="col">
+                Gender
                 <a href="index.php?sort=jenis_kelamin&order=asc">▲</a>
                 <a href="index.php?sort=jenis_kelamin&order=desc">▼</a>
                 </th>
-                <th scope="col">Kelas
+                <th scope="col">
+                Kelas
                 <a href="index.php?sort=kelas&order=asc">▲</a>
                 <a href="index.php?sort=kelas&order=desc">▼</a>
                 </th>
-                <th scope="col">Jurusan
+                <th scope="col">
+                Jurusan
                 <a href="index.php?sort=jurusan&order=asc">▲</a>
                 <a href="index.php?sort=jurusan&order=desc">▼</a>
                 </th>
@@ -53,6 +58,7 @@
                 <a href="index.php?sort=gol_darah&order=desc">▼</a>
                 </th>
                 <th scope="col">Nama Orang Tua</th>
+                <th>Foto</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -72,6 +78,14 @@
                 <td><?= $siswa['gol_darah']; ?></td>
                 <td><?= $siswa['nama_ortu']; ?></td>
                 <td>
+                    <?php if (!empty($siswa['file'])) { ?>
+                    <img src="<?= base_img(); ?>/assets/images/<?= $siswa['file']; ?>" width="90";>
+                    <?php } else { ?>
+                    <img width="90" height="120" src="assets/images/ava1.png">
+                    <?php } ?>
+                </td>
+                <td>
+                
                     <a href="edit.php?nis=<?= $siswa["nis"]; ?>" class="btn badge primary">Edit</a>
                     <a href="delete.php?nis=<?= $siswa["nis"]; ?>" class="btn badge danger" onclick="return confirm('Apakah anda yakin ingin menghapus data tersebut ?')">Delete</a></td>
                 </td>
