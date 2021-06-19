@@ -4,7 +4,7 @@
   $host = 'localhost';
   $user = 'root';
   $pass = '';
-  $db = 'diisi';
+  $db = 'db_akai21';
 
   $mysqli = mysqli_connect($host, $user, $pass, $db) or die('Tidak dapat Koneksi ke database');
   function console_log($output, $with_script_tags = true) {
